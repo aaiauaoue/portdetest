@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 100%;
+  height: fit-content;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.tree {
+  list-style-type: none;
+  padding: 1em;
+  width: 400px;
+  border-right: 1px solid #000000;
+  background-color: white;
+}
+
+.caret {
+  cursor: pointer;
+  user-select: none;
+  display: block;
+  margin: 0.1em 0;
+}
+
+.caret::before {
+  content: "📁";
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  content: "📂";
+}
+
+.nested {
+  display: none;
+  list-style-type: none;
+  padding-left: 2em;
+}
+
+.active {
+  display: block;
+}
+
+.file {
+  cursor: pointer;
+  display: block;
+  margin: 0.4em 0 0.4em 1.2em;
+  color: #000000;
+}
+
+.viewer {
+  flex-grow: 1;
+  padding: 1em;
+  background-color: #ffffff;
+}
+
+.viewer img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000000;
+}

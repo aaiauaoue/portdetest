@@ -64,3 +64,18 @@ body {
   height: auto;
   border: 1px solid #000000;
 }
+
+h2 {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+.active-file {
+  font-weight: bold;
+}
+
+.viewer video {
+  max-width: 100%;
+  margin-top: 1em;
+}

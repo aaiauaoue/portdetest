@@ -40,11 +40,18 @@ document.addEventListener("DOMContentLoaded", function() {
       // vis video hvis den findes
       if (this.dataset.video) {
         if (this.dataset.video.includes("youtube.com/embed")) {
-          content += "<iframe width='100%' height='315' src='" + this.dataset.video + "' frameborder='0' allowfullscreen style='margin-top:1em;'></iframe>";
+          content += "<iframe width='100%' height='515' src='" + this.dataset.video + "' frameborder='0' allowfullscreen style='margin-top:1em;'></iframe>";
         } else {
           content += "<video controls style='max-width:100%; margin-top:1em;'><source src='" + this.dataset.video + "' type='video/mp4'>Din browser understøtter ikke video.</video>";
         }
-      }
+        }
+
+        // vis ekstra tekst hvis den findes
+        if (this.dataset.extra) {
+          var extraFormatted = this.dataset.extra.replace(/\\n/g, "<br>");
+        content += "<div style='margin-top:1em; font-style:normal;'>" + extraFormatted + "</div>";
+        }
+
 
       viewer.innerHTML = content;
     });
